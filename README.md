@@ -1,1 +1,1 @@
-Printf project
+Printf project by Muriuki and Kelvin
