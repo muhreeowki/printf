@@ -13,6 +13,7 @@ int _puts(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
+	_putchar('\0');
 
 	return (1);
 }
