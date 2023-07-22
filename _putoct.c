@@ -14,6 +14,9 @@ void _putoct(unsigned int n, int *count)
 	if (n > 1)
 		_putoct(n / 8, count);
 
-	_putchar('0' + n % 8);
-	(*count)++;
+	if (n > 0)
+	{
+		_putchar('0' + n % 8);
+		(*count)++;
+	}
 }
