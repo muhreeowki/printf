@@ -6,19 +6,15 @@
  * @n: number to print
  */
 
-void _putint(int n)
+void _putint(int n, int *count)
 {
     if (n < 0)
     {
         _putchar('-');
         n = -n;
+	(*count)++;
     }
 
-    if (n / 10 != 0)
-    {
-        _putint(n / 10);
-    }
-
-    _putchar('0' + n % 10);
+    _putuint(n, count);
 }
 

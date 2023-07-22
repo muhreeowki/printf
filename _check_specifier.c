@@ -36,8 +36,7 @@ void _check_specifier (char c, int *count, va_list args)
 		case 'd': 
 		case 'i':
 			num = va_arg(args, int);
-			_putint(num);
-			(*count) += _intlen(num);
+			_putint(num, count);
 			break;
 		case 'b':
 			num = va_arg(args, unsigned int);

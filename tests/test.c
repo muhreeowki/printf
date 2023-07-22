@@ -3,14 +3,14 @@
 
 int main (void)
 {
-	int n = 12345567;
+	int n = -539338646;
 
 	printf("Normal printf\n");
-	printf("Count: %d\n", printf("Number %X\n", n));
+	printf("Count: %d\n", printf("Number %d\n", n));
 
 	printf("\n");
 
 	printf("Our printf\n");
-	printf("Count: %d\n", _printf("Number %X\n", n));
+	printf("Count: %d\n", _printf("Number %d\n", n));
 	return (0);
 }
