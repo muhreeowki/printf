@@ -61,7 +61,11 @@ int _check_specifier (char c, int *count, va_list args)
 			_puthex(num, count, 1);
 			break;
 		default:
-			return (-1);
+			_putchar('%');
+			count++;
+			_putchar(c);
+			count++;
+			break;
 	}
 
 	return (0);

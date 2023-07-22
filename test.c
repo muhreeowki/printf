@@ -7,7 +7,7 @@ int main (void)
 	char string[] = "Hello%";
 	printf("Normal printf: ");
 
-	count = printf("%s%", string);
+	count = printf("%z", string);
 
 	printf("\nCount: %d\n\n", count);
 
@@ -15,7 +15,7 @@ int main (void)
 
 	printf("Our printf: ");
 
-	count = _printf("%s%", string);
+	count = _printf("%z", string);
 
 	printf("\nCount: %d\n", count);
 
