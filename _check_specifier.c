@@ -1,4 +1,16 @@
 #include "main.h"
+/**
+ * _check_specifier - Process and handle a conversion specifier.
+ *
+ * This function processes a conversion specifier ('c', 's', 'd', 'i', or 'b')
+ * and performs appropriate actions based on the specifier.
+ *
+ * @c: The conversion specifier character to process.
+ * @count: Pointer to the count of characters printed so far.
+ * @args: Variable arguments list containing additional arguments.
+ *
+ * Return: None (void).
+ */
 
 
 void _check_specifier (char c, int *count, va_list args)
