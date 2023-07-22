@@ -9,7 +9,9 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int _puts(char *str);
 int _strlen(char *str);
-void _printnum(int n);
+void _putint(int n);
 void _check_specifier (char c, int *count, va_list args);
+int _intlen(int n);
+void _putbin(unsigned int n, int *count);
 
 #endif

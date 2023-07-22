@@ -4,31 +4,32 @@
 void _check_specifier (char c, int *count, va_list args)
 {
 	char *str;
-	int n, num;
-
-	n = *count;
+	int num;
 
 	switch (c)
 	{
 		case '%':
 			_putchar('%');
-			n++;
+			(*count)++;
 			break;
 		case 'c':
 			_putchar(va_arg(args, int));
-			n++;
+			(*count)++;
 			break;
 		case 's':
 			str = va_arg(args, char *);
 			_puts(str);
-			n += _strlen(str);
+			(*count) += _strlen(str);
 			break;
-		case 'd' || 'i':
+		case 'd': 
+		case 'i':
 			num = va_arg(args, int);
-			_printnum(num);
-			n += _strlen(str);
+			_putint(num);
+			(*count) += _intlen(num);
+			break;
+		case 'b':
+			num = va_arg(args, unsigned int);
+			_putbin(num, count);
 			break;
 	}
-
-	*count = n;
 }

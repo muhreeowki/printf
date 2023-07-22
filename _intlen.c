@@ -1,32 +1,28 @@
 #include "main.h"
 
 /**
- * count_digits - Count the number of digits in an integer.
+ * _intlen - Count the number of digits in an integer.
  *
  * @number: The input integer.
  *
  * Return: The number of digits in the integer.
  */
-int _intlen (int number)
+int _intlen (int n)
 {
     int length = 0;
 
-    if (number == 0)
-    {
-        return 1; // Special case for handling zero
-    }
+    if (n == 0)
+        return (1);
 
-    if (number < 0)
-    {
-        number = -number; // Handle negative numbers by making them positive
-    }
+    if (n < 0)
+        n = -n;
 
-    while (number > 0)
+    while (n > 0)
     {
-        number /= 10;
+        n /= 10;
         length++;
     }
 
-    return length;
+    return (length);
 }
 
