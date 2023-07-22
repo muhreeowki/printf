@@ -4,10 +4,10 @@
 int main (void)
 {
 	int count;
-	char string[] = "hello";
+	char string[] = "Hello%";
 	printf("Normal printf: ");
 
-	count = printf("%c", string);
+	count = printf("%s%", string);
 
 	printf("\nCount: %d\n\n", count);
 
@@ -15,7 +15,7 @@ int main (void)
 
 	printf("Our printf: ");
 
-	count = _printf("%c", string);
+	count = _printf("%s%", string);
 
 	printf("\nCount: %d\n", count);
 
