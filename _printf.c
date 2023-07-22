@@ -13,12 +13,12 @@ int _printf(const char *format, ...)
 	int i, j, count;
 	va_list args;
 
+	if (format == NULL)
+		return (-1);
+
 	va_start(args, format);
 
 	i = j = count = 0;
-
-	if (format == NULL)
-		return (0);
 
 	while (format[i] != '\0')
 	{

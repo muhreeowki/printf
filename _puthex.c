@@ -63,6 +63,7 @@ void _puthex(unsigned int n, int *count, int flag)
 				_putchar('0' + n % 16);
 				(*count)++;
 			}
+			break;
 	}
 
 }
