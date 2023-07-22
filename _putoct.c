@@ -12,7 +12,7 @@
 void _putoct(unsigned int n, int *count)
 {
         if (n > 1)
-                _putbin(n / 8, count);
+                _putoct(n / 8, count);
 
         _putchar('0' + n % 8);
         (*count)++;
