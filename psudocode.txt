@@ -1,0 +1,24 @@
+
+int count
+
+while format[i] != NULL
+
+if format[i] == '%'
+	switch (format[i + 1])
+		case 'c':
+			print char
+			increment count
+		case 's':
+			find length of string
+			print string
+			increment count
+		case '%':
+			print '%'
+			increment count
+		case 'd':
+			print number
+			increment count
+else
+	print format[i]
+
+return count
