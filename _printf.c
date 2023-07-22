@@ -13,22 +13,19 @@ int _printf(const char *format, ...)
 	int i, j, count;
 	va_list args;
 
-	if (format == NULL)
-		return (0);
-
 	va_start(args, format);
 
 	i = j = count = 0;
+
+	if (format == NULL)
+		return (0);
 
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
-			/*
 			if (_check_specifier(format[i + 1], &count, args) == -1)
 				return (-1);
-			*/
-			_check_specifier(format[i + 1], &count, args);
 			i++;
 		}
 

@@ -30,8 +30,6 @@ int _check_specifier (char c, int *count, va_list args)
 			break;
 		case 's':
 			str = va_arg(args, char *);
-			if (str == NULL)
-                        	str = "(null)";
 			_puts(str);
 			(*count) += _strlen(str);
 			break;
