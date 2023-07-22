@@ -25,14 +25,13 @@ int _check_specifier (char c, int *count, va_list args)
 			(*count)++;
 			break;
 		case 'c':
-			if (c != '\0')
-			{
-				_putchar(va_arg(args, int));
-				(*count)++;
-			}
+			_putchar(va_arg(args, int));
+			(*count)++;
 			break;
 		case 's':
 			str = va_arg(args, char *);
+			if (str == NULL)
+                        	str = "(null)";
 			_puts(str);
 			(*count) += _strlen(str);
 			break;
