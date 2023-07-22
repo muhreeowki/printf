@@ -3,7 +3,7 @@
 
 int main (void)
 {
-	unsigned int n = 42;
-	printf("Count: %i\n", _printf("Number %b\n", n));
+	unsigned int n = 255;
+	printf("Count: %i\n", _printf("Number %X\n", n));
 	return (0);
 }

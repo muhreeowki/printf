@@ -43,5 +43,21 @@ void _check_specifier (char c, int *count, va_list args)
 			num = va_arg(args, unsigned int);
 			_putbin(num, count);
 			break;
+		case 'u':
+			num = va_arg(args, unsigned int);
+			_putuint(num, count);
+			break;
+		case 'o':
+			num = va_arg(args, unsigned int);
+			_putoct(num, count);
+			break;
+		case 'x':
+			num = va_arg(args, unsigned int);
+			_puthex(num, count, 0);
+			break;
+		case 'X':
+			num = va_arg(args, unsigned int);
+			_puthex(num, count, 1);
+			break;
 	}
 }

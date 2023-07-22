@@ -13,5 +13,8 @@ void _putint(int n);
 void _check_specifier (char c, int *count, va_list args);
 int _intlen(int n);
 void _putbin(unsigned int n, int *count);
+void _putoct(unsigned int n, int *count);
+void _putuint(unsigned int n, int *count);
+void _puthex(unsigned int n, int *count, int flag);
 
 #endif
