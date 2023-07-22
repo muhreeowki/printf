@@ -13,61 +13,56 @@ void _puthex(unsigned int n, int *count, int flag)
 	if (n > 1)
 		_puthex(n / 16, count, flag);
 
-	if (n % 16 > 9)
+	switch (n % 16)
 	{
-		switch (n % 16)
-		{
-			case 10:
-				if (flag == 1)
-					_putchar('A');
-				else
-					_putchar('a');
-				(*count)++;
-				break;
-			case 11:
-				if (flag == 1)
-					_putchar('B');
-				else
-					_putchar('b');
-				(*count)++;
-				break;
-			case 12:
-				if (flag == 1)
-					_putchar('C');
-				else
-					_putchar('c');
-				(*count)++;
-				break;
-			case 13:
-				if (flag == 1)
-					_putchar('D');
-				else
-					_putchar('d');
-				(*count)++;
-				break;
-			case 14:
-				if (flag == 1)
-					_putchar('E');
-				else
-					_putchar('e');
-				(*count)++;
-				break;
-			case 15:
-				if (flag == 1)
-					_putchar('F');
-				else
-					_putchar('f');
-				(*count)++;
-				break;
-			default:
+		case 10:
+			if (flag == 1)
+				_putchar('A');
+			else
+				_putchar('a');
+			(*count)++;
+			break;
+		case 11:
+			if (flag == 1)
+				_putchar('B');
+			else
+				_putchar('b');
+			(*count)++;
+			break;
+		case 12:
+			if (flag == 1)
+				_putchar('C');
+			else
+				_putchar('c');
+			(*count)++;
+			break;
+		case 13:
+			if (flag == 1)
+				_putchar('D');
+			else
+				_putchar('d');
+			(*count)++;
+			break;
+		case 14:
+			if (flag == 1)
+				_putchar('E');
+			else
+				_putchar('e');
+			(*count)++;
+			break;
+		case 15:
+			if (flag == 1)
+				_putchar('F');
+			else
+				_putchar('f');
+			(*count)++;
+			break;
+		default:
+			if (n > 0)
+			{
 				_putchar('0' + n % 16);
-		}
-	}
-
-	else if (n > 0)
-	{
-		_putchar('0' + n % 16);
-		(*count)++;
+				(*count)++;
+			}
 	}
 
 }
