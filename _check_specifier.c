@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _check_specifier - Process and handle a conversion specifier.
  *
@@ -9,11 +10,10 @@
  * @count: Pointer to the count of characters printed so far.
  * @args: Variable arguments list containing additional arguments.
  *
- * Return: None (void).
+ * Return: 0 (success) -1 (failure)
  */
 
-
-void _check_specifier (char c, int *count, va_list args)
+int _check_specifier (char c, int *count, va_list args)
 {
 	char *str;
 	int num;
@@ -58,5 +58,9 @@ void _check_specifier (char c, int *count, va_list args)
 			num = va_arg(args, unsigned int);
 			_puthex(num, count, 1);
 			break;
+		default:
+			return (-1);
 	}
+
+	return (0);
 }
