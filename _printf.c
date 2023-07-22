@@ -24,8 +24,11 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			/*
 			if (_check_specifier(format[i + 1], &count, args) == -1)
 				return (-1);
+			*/
+			_check_specifier(format[i + 1], &count, args);
 			i++;
 		}
 

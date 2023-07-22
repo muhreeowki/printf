@@ -3,10 +3,21 @@
 
 int main (void)
 {
-	printf("Normal printf ");
-	printf("Count: %d\n", printf("%c", 'H'));
+	int count;
+	char string[] = "hello";
+	printf("Normal printf: ");
 
-	printf("Our printf ");
-	printf("Count: %d\n", _printf("%c", 'H'));
+	count = printf("%c", string);
+
+	printf("\nCount: %d\n\n", count);
+
+
+
+	printf("Our printf: ");
+
+	count = _printf("%c", string);
+
+	printf("\nCount: %d\n", count);
+
 	return (0);
 }
