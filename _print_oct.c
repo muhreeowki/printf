@@ -1,10 +1,8 @@
 #include "main.h"
 /**
- * _putoct - Print octal representation of an unsigned integer.
+ * _print_oct - Print octal representation of an unsigned integer.
  *
- * Recursively converts and prints the binary digits of 'n'.
- *
- * @n: Unsigned integer to convert and print in binary form.
+ * @args: Variable arguments list containing additional arguments.
  * @count: Pointer to the count of characters printed so far.
  *
  * Return: None (void).
