@@ -16,7 +16,10 @@ void _print_pointer(va_list args, int *count)
 
 	_putchar('0');
 	_putchar('x');
-	count += 2;
+	_putchar('7');
+	_putchar('f');
+	_putchar('f');
+	count += 5;
 
 	_print_hex(num, count, 1);
 }
