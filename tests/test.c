@@ -7,7 +7,7 @@ int main (void)
 
 	printf("Normal printf: ");
 
-	count = printf("%", NULL);
+	count = printf("%s", "");
 
 	printf("\nCount: %d\n\n", count);
 
@@ -15,7 +15,7 @@ int main (void)
 
 	_printf("Our printf: ");
 
-	count = _printf("%", NULL);
+	count = _printf("%s", "");
 
 	printf("\nCount: %d\n", count);
 
