@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _puthex - Print hexadecimal representation of an unsigned integer.
+ * _print_hex_lower - Print lowercase hexadecimal rep of an unsigned integer.
  *
- * @n: Unsigned integer to convert and print in binary form.
+ * @args: Variable args list containing the unsig int to convert and print.
  * @count: Pointer to the count of characters printed so far.
  *
  * Return: None (void).
@@ -15,14 +15,31 @@ void _print_hex_lower(va_list args, int *count)
 
 	_print_hex(n, count, 0);
 }
-
+/**
+ * _print_hex_upper - Print uppercase hexadecimal rep of an unsigned integer.
+ *
+ * @args: Variable args list containing the unsig int to convert and print.
+ * @count: Pointer to the count of characters printed so far.
+ *
+ * Return: None (void).
+ */
 void _print_hex_upper(va_list args, int *count)
 {
 	unsigned int n = va_arg(args, unsigned int);
 
 	_print_hex(n, count, 1);
 }
-
+/**
+ * _print_hex - Print hexadecimal representation of an unsigned integer.
+ *
+ * Recursively converts and prints the hexadecimal digits of 'n'.
+ *
+ * @n: Unsigned integer to convert and print in binary form.
+ * @count: Pointer to the count of characters printed so far.
+ * @flag:to indicate whether to print upper or lowercase hexadecimal chars.
+ *
+ * Return: None (void).
+ */
 void _print_hex(unsigned int n, int *count, int flag)
 {
 	if (n > 1)

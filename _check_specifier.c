@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _check_specifier - Process and handle a conversion specifier.
  *
@@ -8,11 +7,13 @@
  *
  * @c: The conversion specifier character to process.
  * @args: Variable arguments list containing additional arguments.
+ * @count: Pointer to the count of characters printed so far.
  *
- * Return: 1 (success) -1 (failure)
+ * Return: 1 (success) if the conversion specifier is processed successfully,
+ *         -1 (failure) if there was an error processing the specifier.
  */
 
-int _check_specifier (char c, va_list args, int *count)
+int _check_specifier(char c, va_list args, int *count)
 {
 	int i;
 

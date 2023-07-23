@@ -1,14 +1,17 @@
 #include "main.h"
 
 /**
- * _print_int - prints a number to stdout
+ * _print_int - Print an integer to stdout.
  *
- * @n: number to print
+ * @args: Variable arguments list containing additional arguments.
+ * @count: Pointer to the count of characters printed so far.
+ *
+ * Return: None (void).
  */
 
 void _print_int(va_list args, int *count)
 {
-	int n = va_arg(args , int);
+	int n = va_arg(args, int);
 
 	if (n < 0)
 	{

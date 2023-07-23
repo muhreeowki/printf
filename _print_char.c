@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * _print_char - Print a character to stdout.
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * @args: Variable arguments list containing additional arguments.
+ * @count: Pointer to the count of characters printed so far.
+ *
+ * Return: None (void).
  */
 void _print_char(va_list args, int *count)
 {

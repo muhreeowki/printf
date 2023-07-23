@@ -3,7 +3,7 @@
 /**
  * _print_bin - Print binary representation of an unsigned integer.
  *
- * @n: Unsigned integer to convert and print in binary form.
+ * @args: Variable arguments list containing additional arguments.
  * @count: Pointer to the count of characters printed so far.
  *
  * Return: None (void).
