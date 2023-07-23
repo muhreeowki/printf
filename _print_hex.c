@@ -13,7 +13,14 @@ void _print_hex_lower(va_list args, int *count)
 {
 	unsigned int n = va_arg(args, unsigned int);
 
-	_print_hex(n, count, 0);
+	if (n == 0)
+	{
+		_putchar('0');
+		(*count)++;
+	}
+
+	else
+		_print_hex(n, count, 1);
 }
 /**
  * _print_hex_upper - Print uppercase hexadecimal rep of an unsigned integer.
@@ -27,8 +34,16 @@ void _print_hex_upper(va_list args, int *count)
 {
 	unsigned int n = va_arg(args, unsigned int);
 
-	_print_hex(n, count, 1);
+	if (n == 0)
+	{
+		_putchar('0');
+		(*count)++;
+	}
+
+	else
+		_print_hex(n, count, 1);
 }
+
 /**
  * _print_hex - Print hexadecimal representation of an unsigned integer.
  *
@@ -45,7 +60,7 @@ void _print_hex(unsigned int n, int *count, int flag)
 	if (n > 1)
 		_print_hex(n / 16, count, flag);
 
-	if (n % 16 >= 10 && n % 16 <= 16)
+	if (n % 16 >= 10 && n % 16 <= 15)
 	{
 		if (flag == 1)
 			_putchar(55 + (int) (n % 16));

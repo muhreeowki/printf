@@ -11,7 +11,14 @@ void _print_oct(va_list args, int *count)
 {
 	unsigned int n = va_arg(args, unsigned int);
 
-	_get_oct(n, count);
+	if (n == 0)
+	{
+		_putchar('0');
+		(*count)++;
+	}
+
+	else
+		_get_oct(n, count);
 }
 /**
  * _get_oct - Recursively converts and prints the octal digits of 'n'.
