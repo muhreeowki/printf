@@ -8,7 +8,7 @@
  *
  * Return: None (void).
  */
-void _print_string(va_list args, int *count)
+void _print_sstring(va_list args, int *count)
 {
 	int i;
 	char *str;

@@ -32,5 +32,6 @@ void _get_oct(unsigned int n, int *count);
 void _print_hex_upper(va_list args, int *count);
 void _print_hex_lower(va_list args, int *count);
 void _print_hex(unsigned int n, int *count, int flag);
+void _print_sstring(va_list args, int *count);
 
 #endif
