@@ -32,18 +32,25 @@ int _check_specifier (char c, va_list args, int *count)
 	if (c == '%')
 	{
 		_putchar('%');
-		(*count)++;
+		count++;
 		return (1);
 	}
+
 
 	for (i = 0; specifier_list[i].character != NULL; i++)
 	{
 		if (specifier_list[i].character[0] == c)
 		{
 			specifier_list[i].function(args, count);
+			if (*count == -1)
+				return (-1);
 			return (1);
 		}
 	}
 
-	return (-1);
+	_putchar('%');
+	_putchar(c);
+	(*count) += 2;
+
+	return (1);
 }
