@@ -13,7 +13,14 @@ void _print_oct(va_list args, int *count)
 
 	_get_oct(n, count);
 }
-
+/**
+ * _get_oct - Recursively converts and prints the octal digits of 'n'.
+ *
+ * @n: Unsigned integer to convert and print in octal form.
+ * @count: Pointer to the count of characters printed so far.
+ *
+ * Return: None (void).
+ */
 
 void _get_oct(unsigned int n, int *count)
 {

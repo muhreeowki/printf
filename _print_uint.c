@@ -1,9 +1,12 @@
 #include "main.h"
 
 /**
- * _putuint - prints a number to stdout
+ * _print_uint - Print an unsigned integer to stdout.
  *
- * @n: number to print
+ * @args: Variable arguments list containing additional arguments.
+ * @count: Pointer to the count of characters printed so far.
+ *
+ * Return: None (void).
  */
 
 void _print_uint(va_list args, int *count)
