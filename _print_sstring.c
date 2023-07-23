@@ -27,6 +27,11 @@ void _print_sstring(va_list args, int *count)
 			_putchar('\\');
 			_putchar('x');
 			(*count) += 2;
+			if (str[1] < 16)
+			{
+				_putchar('0');
+				(*count)++;
+			}
 			_print_hex((unsigned int)str[i], count, 1);
 		}
 		else
