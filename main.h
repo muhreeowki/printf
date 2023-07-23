@@ -17,7 +17,8 @@ typedef struct specifier
 } specifier;
 
 int _printf(const char *format, ...);
-int _check_specifier(char c, va_list args, int *count);
+int _check_specifier(const char *c, va_list args, int *count);
+int _extra_checker(const char *c, va_list args, int *count);
 int _putchar(char c);
 int _strlen(char *str);
 void _print_char(va_list args, int *count);
@@ -25,6 +26,7 @@ void _print_string(va_list args, int *count);
 void _print_sstring(va_list args, int *count);
 void _print_int(va_list args, int *count);
 void _print_uint(va_list args, int *count);
+void _print_sint(va_list args, int *count);
 void _print_number(unsigned int n, int *count);
 void _print_bin(va_list args, int *count);
 void _print_binum(unsigned int n, int *count);
