@@ -20,11 +20,11 @@ int _extra_checker(const char *c, va_list args, int *count)
 	specifier specifier_list[] = {
 		{"+d", _print_sint},
 		{"+i", _print_sint},
-		{"#o", _print_sint},
-		{"#x", _print_sint},
-		{"#X", _print_sint},
-		{" d", _print_sint},
-		{" i", _print_sint},
+		{"#o", octal_hash},
+		{"#x", lowerx_hash},
+		{"#X", upperx_hash},
+		{" d", _print_space},
+		{" i", _print_space},
 		{NULL, NULL}
 	};
 

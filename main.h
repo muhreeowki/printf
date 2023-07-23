@@ -36,5 +36,9 @@ void _print_hex_upper(va_list args, int *count);
 void _print_hex_lower(va_list args, int *count);
 void _print_hex(unsigned int n, int *count, int flag);
 void _print_pointer(va_list args, int *count);
+void octal_hash(va_list args ,int *count);
+void lowerx_hash(va_list args ,int *count);
+void upperx_hash(va_list args ,int *count);
+void _print_space(va_list args, int *count);
 
 #endif

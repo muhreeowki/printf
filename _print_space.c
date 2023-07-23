@@ -8,13 +8,13 @@
  *
  * Return: None (void).
  */
-void _print_sint(va_list args, int *count)
+void _print_space(va_list args, int *count)
 {
 	int n = va_arg(args, int);
 
 	if (n >= 0)
 	{
-		_putchar('+');
+		_putchar(' ');
 		(*count)++;
 	}
 
