@@ -22,10 +22,10 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == ' ' || format[i + 1] == '\0')
+			if ( format[i + 1] == '\0')
 				return (-1);
 
-			if (format[i + 1] == '+' || format[i + 1] == '#')
+			if (format[i + 1] == '+' || format[i + 1] == '#' || format[i + 1] == ' ')
 			{
 				flag = _extra_checker((format + i + 1),  args, &count);
 				i++;
