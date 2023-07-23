@@ -20,7 +20,7 @@ void _print_hex_lower(va_list args, int *count)
 	}
 
 	else
-		_print_hex(n, count, 1);
+		_print_hex(n, count, 0);
 }
 /**
  * _print_hex_upper - Print uppercase hexadecimal rep of an unsigned integer.
