@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i, j, count;
+	int i, count, printed_chars;
 	va_list args;
 
 	if (format == NULL)
@@ -18,13 +18,13 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	i = j = count = 0;
+	i = printed_chars = count = 0;
 
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
-			if (_check_specifier(format[i + 1], &count, args) == -1)
+			if (_check_specifier(format[i + 1],  args, &count) == -1)
 				return (-1);
 			i++;
 		}

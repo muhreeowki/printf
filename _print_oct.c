@@ -9,10 +9,18 @@
  *
  * Return: None (void).
  */
-void _putoct(unsigned int n, int *count)
+void _print_oct(va_list args, int *count)
+{
+	unsigned int n = va_arg(args, unsigned int);
+
+	_get_oct(n, count);
+}
+
+
+void _get_oct(unsigned int n, int *count)
 {
 	if (n > 1)
-		_putoct(n / 8, count);
+		_get_oct(n / 8, count);
 
 	if (n > 0)
 	{

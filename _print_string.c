@@ -7,12 +7,19 @@
  * Return: On success 1.
  * On error, -1 is returned
  */
-int _puts(char *str)
+void _print_string(va_list args, int *count)
 {
 	int i;
+	char *str;
+
+	str = va_arg(args, char *);
+
+	if (str == NULL)
+		str = "(null)";
 
 	for (i = 0; str[i] != '\0'; i++)
+	{
 		_putchar(str[i]);
-
-	return (1);
+		(*count)++;
+	}
 }

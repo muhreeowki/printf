@@ -4,10 +4,10 @@
 int main (void)
 {
 	int count;
-	int n = 123456789;
 
 	printf("Normal printf: ");
-	count = printf("%X", n);
+
+	count = printf("%%", 1431);
 
 	printf("\nCount: %d\n\n", count);
 
@@ -15,9 +15,9 @@ int main (void)
 
 	_printf("Our printf: ");
 
-	count = _printf("%X", n);
+	count = _printf("%%", 1431);
 
-	_printf("\nCount: %d\n", count);
+	printf("\nCount: %d\n", count);
 
 	return (0);
 }
