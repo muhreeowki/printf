@@ -4,9 +4,10 @@
 int main (void)
 {
 	int count;
-	int n;
+	int *n;
 
-	n = 0;
+	n = &count;
+
 
 	printf("Normal printf: ");
 

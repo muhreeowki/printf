@@ -18,8 +18,6 @@ void _print_sstring(va_list args, int *count)
 	if (str == NULL)
 		str = "(null)";
 
-
-
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if(str[i] < 32 || str[i] >=127)
@@ -27,13 +25,16 @@ void _print_sstring(va_list args, int *count)
 			_putchar('\\');
 			_putchar('x');
 			(*count) += 2;
-			if (str[1] < 16)
+
+			if (str[i] < 16)
 			{
 				_putchar('0');
 				(*count)++;
 			}
+
 			_print_hex((unsigned int)str[i], count, 1);
 		}
+
 		else
 		{
 			_putchar(str[i]);
