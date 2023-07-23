@@ -28,6 +28,7 @@ int _check_specifier(char c, va_list args, int *count)
 		{"x", _print_hex_lower},
 		{"X", _print_hex_upper},
 		{"S", _print_sstring},
+		{"p", _print_pointer},
 		{NULL, NULL}
 	};
 

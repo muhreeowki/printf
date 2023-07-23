@@ -22,6 +22,7 @@ int _putchar(char c);
 int _strlen(char *str);
 void _print_char(va_list args, int *count);
 void _print_string(va_list args, int *count);
+void _print_sstring(va_list args, int *count);
 void _print_int(va_list args, int *count);
 void _print_uint(va_list args, int *count);
 void _print_number(unsigned int n, int *count);
@@ -32,6 +33,6 @@ void _get_oct(unsigned int n, int *count);
 void _print_hex_upper(va_list args, int *count);
 void _print_hex_lower(va_list args, int *count);
 void _print_hex(unsigned int n, int *count, int flag);
-void _print_sstring(va_list args, int *count);
+void _print_pointer(va_list args, int *count);
 
 #endif

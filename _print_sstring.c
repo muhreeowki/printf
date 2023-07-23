@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * _print_string - Print a string to stdout.
+ * _print_sstring - Print a string to stdout.
+ * Prints the hex ascii value of non printable chars
  *
  * @args: Variable arguments list containing additional arguments.
  * @count: Pointer to the count of characters printed so far.
@@ -20,7 +21,7 @@ void _print_sstring(va_list args, int *count)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if(str[i] < 32 || str[i] >=127)
+		if (str[i] < 32 || str[i] >= 127)
 		{
 			_putchar('\\');
 			_putchar('x');
