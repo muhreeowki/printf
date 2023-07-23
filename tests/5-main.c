@@ -4,13 +4,14 @@
 int main (void)
 {
 	int count;
+	
 
-	printf("Normal printf: ");
-	count = printf("%+k\n", 10);
-	printf("\nNormal printf count: %d\n\n", count);
+	
 
-	printf("Our printf: ");
-	count = _printf("%+k\n", 10);
+	count = _printf("Our printf: \n% \n", +4);
+	_printf("\nOur printf count: %d\n\n", count);
+
+	count = printf("Normal printf: \n% \n", +4);
 	printf("\nNormal printf count: %d\n\n", count);
 	return (0);
 }
