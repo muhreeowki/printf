@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * _puts - writes the string str to stdout
- * @str: The string to print
+ * _print_string - Print a string to stdout.
  *
- * Return: On success 1.
- * On error, -1 is returned
+ * @args: Variable arguments list containing additional arguments.
+ * @count: Pointer to the count of characters printed so far.
+ *
+ * Return: None (void).
  */
 void _print_string(va_list args, int *count)
 {
@@ -17,7 +18,7 @@ void _print_string(va_list args, int *count)
 	if (str == NULL)
 		str = "(null)";
 
-	
+
 
 	for (i = 0; str[i] != '\0'; i++)
 	{

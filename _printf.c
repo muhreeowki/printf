@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _printf - function to print formated strings to stdout
  *
@@ -7,7 +6,6 @@
  *
  * Return: number of charachters printed to stdout
  */
-
 int _printf(const char *format, ...)
 {
 	int i, count, flag;
@@ -31,15 +29,6 @@ int _printf(const char *format, ...)
 
 			if (flag == -1)
 				return (-1);
-
-			/*
-			if (flag == 0)
-			{
-				_putchar('%');
-				_putchar(format[i + 1]);
-				count += 2;
-			}
-			*/
 
 			i++;
 		}
