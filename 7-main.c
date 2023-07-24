@@ -5,16 +5,15 @@
 int main (void)
 {
 	int count;
-	int c;
+	void *c;
 
-	c = INT_MAX;
+	c = &count;
 
-	count = printf("% %\n", c);
+	count = printf("%p\n", (void *) c);
 	printf("count: %d\n\n", count);
 
-	count = _printf("% %\n", c);
+	count = _printf("%p\n", (void *) c);
 	printf("count: %d\n\n", count);
-
 
 	/*
 	printf("__________Normal__________\n");
