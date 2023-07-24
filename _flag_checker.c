@@ -25,6 +25,9 @@ int _flag_checker(const char *c, va_list args, int *count)
 		{"#X", upperx_hash},
 		{" d", _print_space},
 		{" i", _print_space},
+		{" o", _print_oct},
+		{" x", _print_hex_lower},
+		{" X", _print_hex_upper},
 		{NULL, NULL}
 	};
 

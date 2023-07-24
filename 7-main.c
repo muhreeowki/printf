@@ -1,11 +1,19 @@
 #include "main.h"
 #include <stdio.h>
+#include <limits.h>
 
 int main (void)
 {
 	int count;
-	int n = 0;
+	int n = 1024;
 
+	count = printf("pf1: % o", n);
+	printf("\ncount: %d\n\n", count);
+
+	count = _printf("pf2: % o", n);
+	_printf("\ncount: %d\n\n", count);
+
+	/*
 	printf("__________Normal__________\n");
 	count = printf("% d\n", n);
 	printf("count: %d\n\n", count);
@@ -50,6 +58,9 @@ int main (void)
 
 	count = _printf("%#X\n", n);
 	_printf("count: %d\n\n", count);
+
+	*/
+
 
 	return (0);
 }

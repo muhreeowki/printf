@@ -44,5 +44,8 @@ void octal_hash(va_list args ,int *count);
 void lowerx_hash(va_list args ,int *count);
 void upperx_hash(va_list args ,int *count);
 void _print_space(va_list args, int *count);
+void _print_space_o(va_list args, int *count);
+void _print_space_x(va_list args, int *count);
+void _print_space_X(va_list args, int *count);
 
 #endif
