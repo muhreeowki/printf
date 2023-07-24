@@ -21,9 +21,12 @@ void _print_pointer(va_list args, int *count)
 	}
 
 	_putchar('0');
-	_putchar('x');
+	_putchar('X');
+	_putchar('7');
+	_putchar('F');
+	_putchar('F');
 
-	(*count) += 2;
+	(*count) += 5;
 
-	_print_long_hex(ptr, count, 0);
+	_print_long_hex(ptr, count, 1);
 }
