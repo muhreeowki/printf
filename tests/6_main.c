@@ -11,7 +11,7 @@ int main (void)
 
 	printf("Normal printf: ");
 
-	count = printf("%p", n);
+	count = printf("%p", (void *)n);
 	printf("\nCount: %d\n\n", count);
 
 
@@ -19,7 +19,7 @@ int main (void)
 
 	_printf("Our printf: ");
 
-	count = _printf("%p", n);
+	count = _printf("%p", (void *)n);
 	_printf("\nCount: %d\n\n", count);
 
 	return (0);
