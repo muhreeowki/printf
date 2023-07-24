@@ -7,13 +7,6 @@ int main (void)
 	int count;
 	int n = 1024;
 
-	count = printf("pf1: %#d", n);
-	printf("\ncount: %d\n\n", count);
-
-	count = _printf("pf2: %#d", n);
-	_printf("\ncount: %d\n\n", count);
-
-	/*
 	printf("__________Normal__________\n");
 	count = printf("% d\n", n);
 	printf("count: %d\n\n", count);
@@ -27,13 +20,10 @@ int main (void)
 	count = printf("%+i\n", n);
 	printf("count: %d\n\n", count);
 
-	count = printf("%#o\n", n);
+	count = printf("% +d\n", n);
 	printf("count: %d\n\n", count);
 
-	count = printf("%#x\n", n);
-	printf("count: %d\n\n", count);
-
-	count = printf("%#X\n", n);
+	count = printf("%+ d\n", n);
 	printf("count: %d\n\n", count);
 
 
@@ -50,17 +40,11 @@ int main (void)
 	count = _printf("%+i\n", n);
 	_printf("count: %d\n\n", count);
 
-	count = _printf("%#o\n", n);
+	count = _printf("% +d\n", n);
 	_printf("count: %d\n\n", count);
 
-	count = _printf("%#x\n", n);
+	count = _printf("%+ d\n", n);
 	_printf("count: %d\n\n", count);
-
-	count = _printf("%#X\n", n);
-	_printf("count: %d\n\n", count);
-
-	*/
-
 
 	return (0);
 }

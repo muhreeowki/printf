@@ -37,6 +37,9 @@ int _printf(const char *format, ...)
 			if (flag == -1)
 				return (-1);
 
+			if (flag == 2)
+				i++;
+
 			i++;
 		}
 

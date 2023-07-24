@@ -18,26 +18,25 @@ int _flag_checker(const char *c, va_list args, int *count)
 	int i;
 
 	specifier specifier_list[] = {
+		{" d", _print_space},
+		{" i", _print_space},
 		{"+d", _print_sint},
 		{"+i", _print_sint},
-		{"+o", _print_oct},
-		{"+x", _print_hex_lower},
-		{"+X", _print_hex_lower},
-		{"#d", _print_int},
-		{"#i", _print_int},
 		{"#o", octal_hash},
 		{"#x", lowerx_hash},
 		{"#X", upperx_hash},
-		{" d", _print_space},
-		{" i", _print_space},
-		{" o", _print_oct},
-		{" x", _print_hex_lower},
-		{" X", _print_hex_upper},
 		{NULL, NULL}
 	};
 
 	for (i = 0; specifier_list[i].character != NULL; i++)
 	{
+		/* checking for '+ ' or ' +' */
+		if ((c[0] == ' ' || c[1] == ' ' ) && (c[0] == '+' || c[1] == '+') && (c[2] == 'd' || c[2] == 'i'))
+		{
+				_print_sint(args, count);
+				return (2);
+		}
+
 		if (specifier_list[i].character[0] == c[0])
 		{
 			if (specifier_list[i].character[1] == c[1])
