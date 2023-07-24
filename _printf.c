@@ -25,7 +25,14 @@ int _printf(const char *format, ...)
 			if ( format[i + 1] == '\0')
 				return (-1);
 
-			if (format[i + 1] == '+' || format[i + 1] == '#' || format[i + 1] == ' ')
+
+			if (format[i + 1] == 'h' || format[i + 1] == 'l')
+			{
+				flag =_length_specifier((format + i + 1), args, &count);
+				i++;
+			}
+
+			else if (format[i + 1] == '+' || format[i + 1] == '#' || format[i + 1] == ' ')
 			{
 				flag = _flag_checker((format + i + 1),  args, &count);
 				i++;
@@ -33,7 +40,6 @@ int _printf(const char *format, ...)
 
 			else
 				flag = _check_specifier((format + i + 1),  args, &count);
-
 			if (flag == -1)
 				return (-1);
 

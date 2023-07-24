@@ -19,6 +19,7 @@ typedef struct specifier
 int _printf(const char *format, ...);
 int _check_specifier(const char *c, va_list args, int *count);
 int _flag_checker(const char *c, va_list args, int *count);
+int _length_specifier(const char *c, va_list args, int *count);
 int _putchar(char c);
 void _puts(char *str);
 int _strlen(char *str);
@@ -47,5 +48,13 @@ void _print_space(va_list args, int *count);
 void _print_space_o(va_list args, int *count);
 void _print_space_x(va_list args, int *count);
 void _print_space_X(va_list args, int *count);
+void _print_long_oct(va_list args, int *count);
+void _print_long_hex_lower(va_list args, int *count);
+void _print_long_hex_upper(va_list args, int *count);
+void _print_short_int(va_list args, int *count);
+void _print_short_uint(va_list args, int *count);
+void _print_short_oct(va_list args, int *count);
+void _print_short_hex_lower(va_list args, int *count);
+void _print_short_hex_upper(va_list args, int *count);
 
 #endif

@@ -18,11 +18,18 @@ int _length_specifier(const char *c, va_list args, int *count)
 	int i;
 
 	specifier specifier_list[] = {
-		{"ld", _print_sint},
-		{"li", _print_sint},
-		{"lo", octal_hash},
-		{"lx", lowerx_hash},
-		{"lX", upperx_hash},
+		{"ld", _print_int},
+		{"li", _print_int},
+		{"lu", _print_uint},
+		{"lo", _print_long_oct},
+		{"lx", _print_long_hex_lower},
+		{"lX", _print_long_hex_upper},
+		{"hd", _print_short_int},
+		{"hi", _print_short_int},
+		{"hu", _print_short_uint},
+		{"ho", _print_short_oct},
+		{"hx", _print_short_hex_lower},
+		{"hX", _print_short_hex_upper},
 		{NULL, NULL}
 	};
 
