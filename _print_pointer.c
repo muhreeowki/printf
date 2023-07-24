@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdint.h>
 
+void _print_long_hex(unsigned long int n, int *count, int flag);
+
 /**
  * _print_pointer - Print an address to stdout.
  *
@@ -16,7 +18,32 @@ void _print_pointer(va_list args, int *count)
 
 	_putchar('0');
 	_putchar('x');
-	(*count) += 2;
+	_putchar('7');
+	_putchar('f');
+	_putchar('f');
 
-	_print_hex(num, count, 0);
+	(*count) += 5;
+
+	_print_long_hex(num, count, 0);
+}
+
+void _print_long_hex(unsigned long int n, int *count, int flag)
+{
+	if (n >= 1)
+		_print_hex(n / 16, count, flag);
+
+	if (n % 16 >= 10 && n % 16 <= 15)
+	{
+		if (flag == 1)
+			_putchar(55 + (int) (n % 16));
+		else
+			_putchar(87 + (int) (n % 16));
+		(*count)++;
+	}
+
+	else if (n > 0)
+	{
+		_putchar('0' + n % 16);
+		(*count)++;
+	}
 }
