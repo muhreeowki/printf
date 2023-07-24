@@ -23,8 +23,11 @@ void _print_pointer(va_list args, int *count)
 	_putchar('f');
 
 	(*count) += 5;
-
-	_print_long_hex(num, count, 0);
+	
+	if (sizeof(void *) == 8)
+		_print_long_hex(num, count, 0);
+	else
+		_print_hex(num, count, 0);
 }
 
 void _print_long_hex(unsigned long int n, int *count, int flag)
