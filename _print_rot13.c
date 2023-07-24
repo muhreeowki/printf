@@ -17,6 +17,8 @@ void _print_rot13(va_list args, int *count)
 				(*count)++;
 				break;
 			}
+			else
+				_putchar(str[i]);
 		}
 	}
 }
