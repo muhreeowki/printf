@@ -25,5 +25,5 @@ void _print_pointer(va_list args, int *count)
 
 	(*count) += 2;
 
-	_print_long_hex((unsigned long int) ptr, count, 1);
+	_print_long_hex((unsigned long int) ptr, count, 0);
 }
