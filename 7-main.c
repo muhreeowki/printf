@@ -5,8 +5,18 @@
 int main (void)
 {
 	int count;
-	int n = 1024;
+	int c;
 
+	c = INT_MAX;
+
+	count = printf("% %\n", c);
+	printf("count: %d\n\n", count);
+
+	count = _printf("% %\n", c);
+	printf("count: %d\n\n", count);
+
+
+	/*
 	printf("__________Normal__________\n");
 	count = printf("% d\n", n);
 	printf("count: %d\n\n", count);
@@ -45,6 +55,8 @@ int main (void)
 
 	count = _printf("%+ d\n", n);
 	_printf("count: %d\n\n", count);
+
+	*/
 
 	return (0);
 }

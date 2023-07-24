@@ -18,8 +18,6 @@ void _print_short_int(va_list args, int *count)
 
 
 
-
-
 void _print_short_uint(va_list args, int *count)
 {
     unsigned short int n = va_arg(args, unsigned int);
@@ -42,6 +40,7 @@ void _print_short_oct(va_list args, int *count)
     else
         _get_oct(n, count);
 }
+
 
 
 

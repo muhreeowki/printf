@@ -28,14 +28,22 @@ int _flag_checker(const char *c, va_list args, int *count)
 		{NULL, NULL}
 	};
 
+	/* checking for '+ ' or ' +' */
+	if ((c[0] == ' ' || c[1] == ' ' ) && (c[0] == '+' || c[1] == '+') && (c[2] == 'd' || c[2] == 'i'))
+	{
+			_print_sint(args, count);
+			return (2);
+	}
+
+	if (c[0] == ' ' && c[1] == '%')
+	{
+			_putchar('%');
+			(*count)++;
+			return (1);
+	}
+
 	for (i = 0; specifier_list[i].character != NULL; i++)
 	{
-		/* checking for '+ ' or ' +' */
-		if ((c[0] == ' ' || c[1] == ' ' ) && (c[0] == '+' || c[1] == '+') && (c[2] == 'd' || c[2] == 'i'))
-		{
-				_print_sint(args, count);
-				return (2);
-		}
 
 		if (specifier_list[i].character[0] == c[0])
 		{
