@@ -19,7 +19,7 @@ int main (void)
 	_printf("Our printf: ");
 	*/
 
-	count = _printf("%R", "Hello World!");
+	count = _printf("%R", "qwerty12345!@#$%?><CMDHACKER007");
 	_printf("\nCount: %d\n\n", count);
 	return (0);
 }

@@ -11,7 +11,7 @@ void _print_rot13(va_list args, int *count)
 	{
 		for (j = 0; j <= 52; j++)
 		{
-			if ((str[i] >= 32 && str[i] <= 64) || (str[i] >= 90 && str[i] <= 96))
+			if (str[i] < 65 || (str[i] > 90 && str[i] < 97) || str[i] > 122)
 			{
 				_putchar(str[i]);
 				(*count)++;
