@@ -17,7 +17,6 @@ void octal_hash(va_list args ,int *count)
 		_putchar('0');
 		(*count)++;
 	}
-
 }
 
 void lowerx_hash(va_list args ,int *count)
@@ -38,7 +37,6 @@ void lowerx_hash(va_list args ,int *count)
 		_putchar('0');
 		(*count)++;
 	}
-	
 }
 
 void upperx_hash(va_list args ,int *count)

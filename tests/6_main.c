@@ -6,12 +6,12 @@ int main (void)
 	int count;
 	int *n;
 
-	n = 0;
+	n = &count;
 
 
 	printf("Normal printf: ");
 
-	count = printf("hex: %x", n);
+	count = printf("%#x", n);
 	printf("\nCount: %d\n\n", count);
 
 
@@ -19,7 +19,7 @@ int main (void)
 
 	_printf("Our printf: ");
 
-	count = _printf("hex: %x", n);
+	count = _printf("%p", n);
 	_printf("\nCount: %d\n\n", count);
 
 	return (0);
