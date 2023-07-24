@@ -13,48 +13,35 @@
  *         -1 (failure) if there was an error processing the specifier.
  */
 
-int _check_specifier(const char *c, va_list args, int *count)
+int _length_specifier(const char *c, va_list args, int *count)
 {
 	int i;
 
 	specifier specifier_list[] = {
-		{"c", _print_char},
-		{"s", _print_string},
-		{"d", _print_int},
-		{"i", _print_int},
-		{"u", _print_uint},
-		{"b", _print_bin},
-		{"o", _print_oct},
-		{"x", _print_hex_lower},
-		{"X", _print_hex_upper},
-		{"S", _print_sstring},
-		{"p", _print_pointer},
-		{"r", _print_reverse},
-		{"R", _print_rot13},
+		{"ld", _print_sint},
+		{"li", _print_sint},
+		{"lo", octal_hash},
+		{"lx", lowerx_hash},
+		{"lX", upperx_hash},
 		{NULL, NULL}
 	};
 
-	if (*c == '%')
-	{
-		_putchar('%');
-		(*count)++;
-		return (1);
-	}
-
 	for (i = 0; specifier_list[i].character != NULL; i++)
 	{
-		if (specifier_list[i].character[0] == *c)
+		if (specifier_list[i].character[0] == c[0])
 		{
-			specifier_list[i].function(args, count);
-			if (*count == -1)
-				return (-1);
-			return (1);
+			if (specifier_list[i].character[1] == c[1])
+			{
+				specifier_list[i].function(args, count);
+				return (1);
+			}
 		}
 	}
 
 	_putchar('%');
-	_putchar(*c);
-	(*count) += 2;
+	_putchar(c[0]);
+	_putchar(c[1]);
+	(*count) += 3;
 
 	return (0);
 }

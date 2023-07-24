@@ -13,7 +13,7 @@
  *         -1 (failure) if there was an error processing the specifier.
  */
 
-int _extra_checker(const char *c, va_list args, int *count)
+int _flag_checker(const char *c, va_list args, int *count)
 {
 	int i;
 

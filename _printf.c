@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 
 			if (format[i + 1] == '+' || format[i + 1] == '#' || format[i + 1] == ' ')
 			{
-				flag = _extra_checker((format + i + 1),  args, &count);
+				flag = _flag_checker((format + i + 1),  args, &count);
 				i++;
 			}
 

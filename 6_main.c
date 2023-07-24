@@ -8,19 +8,18 @@ int main (void)
 
 	n = &count;
 
-
 	printf("Normal printf: ");
 
-	count = printf("%p", (void *)n);
+	count = printf("%#X", (void *)n);
 	printf("\nCount: %d\n\n", count);
-
-
 
 
 	_printf("Our printf: ");
 
-	count = _printf("%p", (void *)n);
+	count = _printf("%r", "Hello World");
 	_printf("\nCount: %d\n\n", count);
 
+	count = _printf("%R", "Hello World");
+	_printf("\nCount: %d\n\n", count);
 	return (0);
 }
