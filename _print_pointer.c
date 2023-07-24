@@ -23,10 +23,10 @@ void _print_pointer(va_list args, int *count)
 	_putchar('0');
 	_putchar('x');
 	_putchar('7');
-	_putchar('F');
-	_putchar('F');
+	_putchar('f');
+	_putchar('f');
 
 	(*count) += 5;
 
-	_print_long_hex(ptr, count, 1);
+	_print_long_hex(ptr, count, 0);
 }
