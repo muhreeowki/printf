@@ -12,7 +12,6 @@
 void _print_pointer(va_list args, int *count)
 {
 	void *ptr = va_arg(args, void *);
-	unsigned long int num = (unsigned long int)ptr;
 
 	if (ptr == NULL)
 	{
@@ -26,6 +25,5 @@ void _print_pointer(va_list args, int *count)
 
 	(*count) += 2;
 
-	_print_long_hex(num, count, 0);
-
+	_print_long_hex((unsigned long int) ptr, count, 1);
 }
