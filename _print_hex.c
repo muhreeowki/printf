@@ -89,7 +89,7 @@ void _print_hex(unsigned int n, int *count, int flag)
  */
 void _print_long_hex(unsigned long int n, int *count, int flag)
 {
-	if (n > 0)
+	if (n != 0)
 		_print_hex(n / 16, count, flag);
 
 	if (n % 16 >= 10 && n % 16 <= 15)
