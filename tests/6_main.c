@@ -3,20 +3,21 @@
 
 int main (void)
 {
-	void *n;
+	
 	int count;
+	long unsigned int n=9800;
 
-	n = &count;
+	
 
 	printf("Normal printf: ");
 
-	count = printf("%p", n);
+	count = printf("%ld", n);
 	printf("\nCount: %d\n\n", count);
 
 
 	_printf("Our printf: ");
 
-	count = _printf("%p", n);
+	count = _printf("%ld", n);
 	_printf("\nCount: %d\n\n", count);
 	return (0);
 }

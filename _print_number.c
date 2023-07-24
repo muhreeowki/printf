@@ -11,7 +11,7 @@
 
 void _print_int(va_list args, int *count)
 {
-	int n = va_arg(args, int);
+	long int n = va_arg(args, int);
 
 	if (n < 0)
 	{
@@ -62,7 +62,7 @@ void _print_sint(va_list args, int *count)
 
 void _print_uint(va_list args, int *count)
 {
-	unsigned int n = va_arg(args, unsigned int);
+	long unsigned int n = va_arg(args, unsigned int);
 
 	_print_number(n, count);
 }
