@@ -12,6 +12,7 @@ void _print_reverse(va_list args, int *count)
 
 	for (i = 0; str[i] != '\0'; i++)
 		;
+	i--;
 
 	for (j = i; j >= 0; j--)
 	{
