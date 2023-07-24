@@ -7,10 +7,10 @@ int main (void)
 	int count;
 	int n = 1024;
 
-	count = printf("pf1: % o", n);
+	count = printf("pf1: %#d", n);
 	printf("\ncount: %d\n\n", count);
 
-	count = _printf("pf2: % o", n);
+	count = _printf("pf2: %#d", n);
 	_printf("\ncount: %d\n\n", count);
 
 	/*

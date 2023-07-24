@@ -20,6 +20,11 @@ int _flag_checker(const char *c, va_list args, int *count)
 	specifier specifier_list[] = {
 		{"+d", _print_sint},
 		{"+i", _print_sint},
+		{"+o", _print_oct},
+		{"+x", _print_hex_lower},
+		{"+X", _print_hex_lower},
+		{"#d", _print_int},
+		{"#i", _print_int},
 		{"#o", octal_hash},
 		{"#x", lowerx_hash},
 		{"#X", upperx_hash},
