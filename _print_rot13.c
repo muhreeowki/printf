@@ -11,17 +11,18 @@ void _print_rot13(va_list args, int *count)
 	{
 		for (j = 0; j <= 52; j++)
 		{
+			if ((str[i] >= 32 && str[i] <= 64) || (str[i] >= 90 && str[i] <= 96))
+			{
+				_putchar(str[i]);
+				(*count)++;
+				break;
+			}
+
 			if (str[i] == alphabet[j])
 			{
 				_putchar(rot13[j]);
 				(*count)++;
 				break;
-			}
-
-			else
-			{
-				_putchar(str[i]);
-				(*count)++;
 			}
 		}
 	}
