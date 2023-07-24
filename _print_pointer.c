@@ -14,22 +14,21 @@ void _print_pointer(va_list args, int *count)
 	void *ptr = va_arg(args, void *);
 	unsigned long int num = (unsigned long int)ptr;
 
-	_putchar('0');
-	_putchar('x');
-
-	(*count) += 2;
-	
-	if (sizeof(void *) == 8)
+	if (ptr == NULL)
 	{
-		_putchar('7');
-		_putchar('f');
-		_putchar('f');
-
-		(*count) += 3;
-
-		_print_long_hex(num, count, 0);
+		_puts("(nil)");
+		(*count) += 5;
+		return;
 	}
 
-	else
-		_print_hex(num, count, 0);
+	_putchar('0');
+	_putchar('x');
+	_putchar('7');
+	_putchar('f');
+	_putchar('f');
+
+	(*count) += 5;
+
+	_print_long_hex(num, count, 0);
+
 }

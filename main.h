@@ -20,6 +20,7 @@ int _printf(const char *format, ...);
 int _check_specifier(const char *c, va_list args, int *count);
 int _flag_checker(const char *c, va_list args, int *count);
 int _putchar(char c);
+void _puts(char *str);
 int _strlen(char *str);
 void _print_char(va_list args, int *count);
 void _print_string(va_list args, int *count);

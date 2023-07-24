@@ -39,3 +39,15 @@ int _putchar(char c)
 }
 
 
+/**
+ * _puts - prints a string to stdout
+ *
+ * @str: Address of the first char in the string
+ */
+void _puts(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+		_putchar(str[i]);
+}
