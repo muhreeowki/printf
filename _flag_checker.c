@@ -29,7 +29,6 @@ int _flag_checker(const char *c, va_list args, int *count)
 
 	if ((c[0] == ' ' || c[1] == ' ') && (c[0] == '+' || c[1] == '+'))
 		return (handle_space_plus((c + 2), args, count));
-
 	if (c[0] == ' ' && c[1] == '%')
 	{
 		_putchar('%');
@@ -48,24 +47,22 @@ int _flag_checker(const char *c, va_list args, int *count)
 			}
 		}
 	}
-
 	_putchar('%');
 	_putchar(c[0]);
 	_putchar(c[1]);
 	(*count) += 3;
-
 	return (0);
 }
 
 /**
- * handle_space_plus - this function handles use of 
+ * handle_space_plus - this function handles use of
  * both space and plus flags
  *
  * @c: Character following the flags
  * @args: Variable arguments list containing additional arguments.
  * @count: Pointer to the count of characters printed so far.
  *
- * Return: 1 if c is 'i' or 'd' 
+ * Return: 1 if c is 'i' or 'd'
  * 2 otherwise
  */
 int handle_space_plus(const char *c, va_list args, int *count)
