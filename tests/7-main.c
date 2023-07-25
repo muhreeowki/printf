@@ -4,25 +4,12 @@
 
 int main (void)
 {
-<<<<<<< HEAD
-	unsigned long int n = 9;
-=======
-	int n = 7333;
-	int count;
->>>>>>> 380c3abc02b43ed2e941017ff02e89804850c6b0
+	unsigned long int n = ULONG_MAX;
 
-/*	printf("__________Normal__________\n");*/
+	/*("__________Normal__________\n");*/
 
-<<<<<<< HEAD
 	printf("%+p\n", n);
 	_printf("%+p\n", n);
-=======
-	
-	count = printf("%+i\n", n);
-	printf("count: %d\n", count);
-
-	count = _printf("%+i\n", n);
-	_printf("count: %d\n", count);
 
 	/*
 	printf("%li\n", n);
@@ -62,8 +49,6 @@ int main (void)
 	_printf("%hX\n", n);
 
 	*/
-
->>>>>>> 380c3abc02b43ed2e941017ff02e89804850c6b0
 
 	return (0);
 }
