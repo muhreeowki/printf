@@ -91,7 +91,7 @@ void _print_short_hex_lower(va_list args, int *count)
  */
 void _print_short_hex_upper(va_list args, int *count)
 {
-	unsigned int n = va_arg(args, int);
+	unsigned short n = va_arg(args, int);
 
 	if (n == 0)
 	{
@@ -100,6 +100,6 @@ void _print_short_hex_upper(va_list args, int *count)
 	}
 
 	else
-		_print_hex(n, count, 1);
+		_print_hex((unsigned short) n, count, 1);
 }
 
