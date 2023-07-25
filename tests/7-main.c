@@ -4,30 +4,29 @@
 
 int main (void)
 {
-	unsigned long int num = ULONG_MAX;
-
-	void *n = &num;
+	unsigned long int n = INT_MAX;
 
 	/*("__________Normal__________\n");*/
 
-	printf("%+ p\n", n);
-	_printf("%+ p\n", n);
+
+	printf("%#i\n", n);
+	_printf("%#i\n", n);
 
 	/*
-	printf("%li\n", n);
-	_printf("%li\n", n);
+	printf("%+p\n", n);
+	_printf("%+p\n", n);
 
-	printf("%hi\n", n);
-	_printf("%hi\n", n);
+	printf("%+d\n", n);
+	_printf("%+d\n", n);
 
-	printf("%ld\n", n);
-	_printf("%ld\n", n);
+	printf("% d\n", n);
+	_printf("% d\n", n);
 
-	printf("%hd\n", n);
-	_printf("%hd\n", n);
+	printf("%+ d\n", n);
+	_printf("%+ d\n", n);
 
-	printf("%lx\n", n);
-	_printf("%lx\n", n);
+	printf("%x\n", n);
+	_printf("%x\n", n);
 
 	printf("%hx\n", n);
 	_printf("%hx\n", n);
@@ -49,7 +48,6 @@ int main (void)
 
 	printf("%hX\n", n);
 	_printf("%hX\n", n);
-
 	*/
 
 	return (0);
