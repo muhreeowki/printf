@@ -4,16 +4,16 @@
 
 int main (void)
 {
-	unsigned long int n = ULONG_MAX;
+	int n = 7333;
 	int count;
 
-	printf("__________Normal__________\n");
+/*	printf("__________Normal__________\n");*/
 
 	
-	count = printf("%+ k\n", n);
+	count = printf("%+i\n", n);
 	printf("count: %d\n", count);
 
-	count = _printf("%+ k\n", n);
+	count = _printf("%+i\n", n);
 	_printf("count: %d\n", count);
 
 	/*
