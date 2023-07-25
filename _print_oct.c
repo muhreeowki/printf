@@ -29,7 +29,7 @@ void _print_oct(va_list args, int *count)
  * Return: None (void).
  */
 
-void _get_oct(unsigned int n, int *count)
+void _get_oct(unsigned long int n, int *count)
 {
 	if (n > 1)
 		_get_oct(n / 8, count);

@@ -6,13 +6,12 @@ int main (void)
 {
 	int count;
 
-	void *n = malloc(5);
-
-	count = printf("%p\n", n);
+	count = printf("%hx\n", ULONG_MAX);
 	printf("len: %d\n\n", count);
 
-	count = _printf("%p\n", n);
+	count = _printf("%hx\n", ULONG_MAX);
 	_printf("len: %d\n\n", count);
+
 	/*
 	printf("__________Normal__________\n");
 	count = printf("%lx\n", n);

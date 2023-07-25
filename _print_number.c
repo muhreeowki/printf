@@ -11,7 +11,7 @@
 
 void _print_int(va_list args, int *count)
 {
-	long int n = va_arg(args, int);
+	long int n = va_arg(args, long int);
 
 	if (n < 0)
 	{
@@ -20,7 +20,7 @@ void _print_int(va_list args, int *count)
 		(*count)++;
 	}
 
-	_print_number((unsigned int) n, count);
+	_print_number((unsigned long int) n, count);
 }
 
 /**
@@ -33,7 +33,7 @@ void _print_int(va_list args, int *count)
  */
 void _print_sint(va_list args, int *count)
 {
-	int n = va_arg(args, int);
+	long int n = va_arg(args, long int);
 
 	if (n >= 0)
 	{
@@ -48,7 +48,7 @@ void _print_sint(va_list args, int *count)
 		n = -n;
 	}
 
-	_print_number((unsigned int) n, count);
+	_print_number((unsigned long int) n, count);
 }
 
 /**
@@ -62,7 +62,7 @@ void _print_sint(va_list args, int *count)
 
 void _print_uint(va_list args, int *count)
 {
-	unsigned long int n = va_arg(args, unsigned int);
+	unsigned long int n = va_arg(args, unsigned long int);
 
 	_print_number(n, count);
 }
@@ -77,7 +77,7 @@ void _print_uint(va_list args, int *count)
  *
  * Return: None (void).
  */
-void _print_number(unsigned int n, int *count)
+void _print_number(unsigned long int n, int *count)
 {
 	if (n / 10 != 0)
 		_print_number(n / 10, count);
