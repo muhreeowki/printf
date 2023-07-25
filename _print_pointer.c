@@ -28,5 +28,5 @@ void _print_pointer(va_list args, int *count)
 
 	(*count) += 5;
 
-	_print_long_hex(ptr, count, 0);
+	_print_hex(ptr, count, 0);
 }

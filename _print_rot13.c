@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * _print_rot13 - prints a rot13'ed string
+ *
+ * @args: list of arguments passed into printf
+ * @count: number of characters printed so far
+ */
 void _print_rot13(va_list args, int *count)
 {
 	int i, j;

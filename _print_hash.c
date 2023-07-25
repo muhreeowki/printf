@@ -1,6 +1,14 @@
 #include "main.h"
 
-void octal_hash(va_list args ,int *count)
+/**
+ * octal_hash - this function handles #o flag
+ *
+ * @args: Variable arguments list containing additional arguments.
+ * @count: Pointer to the count of characters printed so far.
+ *
+ * Return: None (void).
+ */
+void octal_hash(va_list args, int *count)
 {
 	unsigned int n = va_arg(args, unsigned int);
 
@@ -19,10 +27,19 @@ void octal_hash(va_list args ,int *count)
 	}
 }
 
-void lowerx_hash(va_list args ,int *count)
+
+/**
+ * lowerx_hash - this function handles #x flag
+ *
+ * @args: Variable arguments list containing additional arguments.
+ * @count: Pointer to the count of characters printed so far.
+ *
+ * Return: None (void).
+ */
+void lowerx_hash(va_list args, int *count)
 {
 	unsigned int n = va_arg(args, unsigned int);
-	
+
 	if (n > 0)
 	{
 		_putchar('0');
@@ -39,10 +56,19 @@ void lowerx_hash(va_list args ,int *count)
 	}
 }
 
-void upperx_hash(va_list args ,int *count)
+
+/**
+ * upperx_hash - this function handles #X flag
+ *
+ * @args: Variable arguments list containing additional arguments.
+ * @count: Pointer to the count of characters printed so far.
+ *
+ * Return: None (void).
+ */
+void upperx_hash(va_list args, int *count)
 {
 	unsigned int n = va_arg(args, unsigned int);
-	
+
 	if (n > 0)
 	{
 		_putchar('0');
@@ -58,4 +84,3 @@ void upperx_hash(va_list args ,int *count)
 		(*count)++;
 	}
 }
-

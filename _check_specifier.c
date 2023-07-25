@@ -18,20 +18,13 @@ int _check_specifier(const char *c, va_list args, int *count)
 	int i;
 
 	specifier specifier_list[] = {
-		{"c", _print_char},
-		{"s", _print_string},
-		{"d", _print_int},
-		{"i", _print_int},
-		{"u", _print_uint},
-		{"b", _print_bin},
-		{"o", _print_oct},
-		{"x", _print_hex_lower},
-		{"X", _print_hex_upper},
-		{"S", _print_sstring},
-		{"p", _print_pointer},
-		{"r", _print_reverse},
-		{"R", _print_rot13},
-		{NULL, NULL}
+		{"c", _print_char}, {"s", _print_string},
+		{"d", _print_int}, {"i", _print_int},
+		{"u", _print_uint}, {"b", _print_bin},
+		{"o", _print_oct}, {"x", _print_hex_lower},
+		{"X", _print_hex_upper}, {"S", _print_sstring},
+		{"p", _print_pointer}, {"r", _print_reverse},
+		{"R", _print_rot13}, {NULL, NULL}
 	};
 
 	if (*c == '%')

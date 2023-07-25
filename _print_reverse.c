@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * rev_string - reverses a string
+ * _print_reverse - prints a string in reverses
  *
- * @s: Address of string to reverse
+ * @args: list of arguments passed in printf
+ * @count: number of characters printed so far
  */
 void _print_reverse(va_list args, int *count)
 {

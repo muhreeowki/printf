@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _print_sint - Print a signed integer to stdout.
+ * _print_space - This function handles space flags.
  *
  * @args: Variable arguments list containing additional arguments.
  * @count: Pointer to the count of characters printed so far.
@@ -22,7 +22,7 @@ void _print_space(va_list args, int *count)
 	{
 		_putchar('-');
 		(*count)++;
-		n=-n;
+		n = -n;
 	}
 
 	_print_number((unsigned int) n, count);

@@ -1,9 +1,6 @@
 #include "main.h"
 /**
- * _check_specifier - Process and handle a conversion specifier.
- *
- * This function processes a conversion specifier ('c', 's', 'd', 'i', or 'b')
- * and performs appropriate actions based on the specifier.
+ * _length_specifier - Process and handle length specifiers.
  *
  * @c: The conversion specifier character to process.
  * @args: Variable arguments list containing additional arguments.
