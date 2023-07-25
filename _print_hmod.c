@@ -19,7 +19,7 @@ void _print_short_int(va_list args, int *count)
 		(*count)++;
 	}
 
-	_print_number((unsigned int)n, count);
+	_print_number(n, count);
 }
 
 /**
@@ -32,7 +32,7 @@ void _print_short_int(va_list args, int *count)
  */
 void _print_short_uint(va_list args, int *count)
 {
-	unsigned int n = va_arg(args, unsigned  int);
+	unsigned int n = va_arg(args, int);
 
 	_print_number(n, count);
 }
@@ -47,7 +47,7 @@ void _print_short_uint(va_list args, int *count)
  */
 void _print_short_oct(va_list args, int *count)
 {
-	unsigned int n = va_arg(args, unsigned int);
+	unsigned int n = va_arg(args, int);
 
 	if (n == 0)
 	{
@@ -69,7 +69,7 @@ void _print_short_oct(va_list args, int *count)
  */
 void _print_short_hex_lower(va_list args, int *count)
 {
-	unsigned int n = va_arg(args, unsigned int);
+	unsigned int n = va_arg(args, int);
 
 	if (n == 0)
 	{
@@ -91,7 +91,7 @@ void _print_short_hex_lower(va_list args, int *count)
  */
 void _print_short_hex_upper(va_list args, int *count)
 {
-	unsigned int n = va_arg(args, unsigned int);
+	unsigned int n = va_arg(args, int);
 
 	if (n == 0)
 	{

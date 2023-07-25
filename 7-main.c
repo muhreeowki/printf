@@ -6,34 +6,42 @@ int main (void)
 {
 	int count;
 
-	unsigned long int n = 192312;
+	void *n = malloc(5);
 
+	count = printf("%p\n", n);
+	printf("len: %d\n\n", count);
+
+	count = _printf("%p\n", n);
+	_printf("len: %d\n\n", count);
+	/*
 	printf("__________Normal__________\n");
-	count = printf("%ld\n", n);
+	count = printf("%lx\n", n);
 	printf("count: %d\n\n", count);
 
-	count = printf("%li\n", n);
+	count = printf("%hx\n", n);
 	printf("count: %d\n\n", count);
 
-	count = printf("%hd\n", n);
+	count = printf("%lo\n", n);
 	printf("count: %d\n\n", count);
 
-	count = printf("%hi\n", n);
+	count = printf("%ho\n", n);
 	printf("count: %d\n\n", count);
 
 
 	printf("__________Our__________\n");
-	count = _printf("%ld\n", n);
+	count = _printf("%lx\n", n);
 	_printf("count: %d\n\n", count);
 
-	count = _printf("%li\n", n);
+	count = _printf("%hx\n", n);
 	_printf("count: %d\n\n", count);
 
-	count = _printf("%hd\n", n);
+	count = _printf("%lo\n", n);
 	_printf("count: %d\n\n", count);
 
-	count = _printf("%hi\n", n);
+	count = _printf("%ho\n", n);
 	_printf("count: %d\n\n", count);
+
+	*/
 
 	return (0);
 }

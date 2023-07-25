@@ -8,10 +8,9 @@
  *
  * Return: None (void).
  */
-
 void _print_hex_lower(va_list args, int *count)
 {
-	unsigned int n = va_arg(args, unsigned int);
+	unsigned long int n = va_arg(args, unsigned long int);
 
 	if (n == 0)
 	{
@@ -22,6 +21,7 @@ void _print_hex_lower(va_list args, int *count)
 	else
 		_print_hex(n, count, 0);
 }
+
 /**
  * _print_hex_upper - Print uppercase hexadecimal rep of an unsigned integer.
  *
@@ -32,7 +32,7 @@ void _print_hex_lower(va_list args, int *count)
  */
 void _print_hex_upper(va_list args, int *count)
 {
-	unsigned int n = va_arg(args, unsigned int);
+	unsigned long int n = va_arg(args, unsigned long int);
 
 	if (n == 0)
 	{
@@ -55,23 +55,23 @@ void _print_hex_upper(va_list args, int *count)
  *
  * Return: None (void).
  */
-void _print_hex(unsigned long int n, int *count, int flag)
+void _print_hex(unsigned long n, int *count, int flag)
 {
-	if (n > 0)
+	if (n / 16 != 0)
 		_print_hex(n / 16, count, flag);
 
-	if (n % 16 >= 10 && n % 16 <= 15)
+	if (n % 16 < 10)
+	{
+		_putchar('0' + (n % 16));
+		(*count)++;
+	}
+
+	else
 	{
 		if (flag == 1)
 			_putchar(55 + (int) (n % 16));
 		else
 			_putchar(87 + (int) (n % 16));
-		(*count)++;
-	}
-
-	else if (n > 0)
-	{
-		_putchar('0' + n % 16);
 		(*count)++;
 	}
 }
