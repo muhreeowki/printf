@@ -4,12 +4,14 @@
 
 int main (void)
 {
-	unsigned long int n = ULONG_MAX;
+	unsigned long int num = ULONG_MAX;
+
+	void *n = &num;
 
 	/*("__________Normal__________\n");*/
 
-	printf("%+p\n", n);
-	_printf("%+p\n", n);
+	printf("%+ p\n", n);
+	_printf("%+ p\n", n);
 
 	/*
 	printf("%li\n", n);

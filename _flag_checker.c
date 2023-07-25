@@ -68,7 +68,7 @@ int _flag_checker(const char *c, va_list args, int *count)
  */
 int handle_space_plus(const char *c, va_list args, int *count)
 {
-	char specs[] = {'o', 'x', 'X', 'u', 'c', 's'};
+	char specs[] = {'o', 'x', 'X', 'u', 'c', 's', 'p'};
 	int i;
 
 	if (c[0] == 'd' || c[0] == 'i')
@@ -77,7 +77,13 @@ int handle_space_plus(const char *c, va_list args, int *count)
 		return (2);
 	}
 
-	for (i = 0; i < 4; i++)
+	if (c[0] == 'p')
+	{
+		_print_plus_pointer(args, count);
+		return (2);
+	}
+
+	for (i = 0; i < 5; i++)
 	{
 		if (c[0] == specs[i])
 			return (_check_specifier(c, args, count) + 1);
