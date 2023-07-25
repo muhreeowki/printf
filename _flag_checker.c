@@ -17,12 +17,15 @@ int _flag_checker(const char *c, va_list args, int *count)
 	specifier specifier_list[] = {
 		{" d", _print_space}, {" i", _print_space},
 		{"+d", _print_sint}, {"+i", _print_sint},
+		{"+o", _print_oct}, {" o", _print_oct},
+		{"+x", _print_hex_lower}, {" x", _print_hex_lower},
+		{"+X", _print_hex_upper}, {" X", _print_hex_upper},
 		{"#o", octal_hash}, {"#x", lowerx_hash},
 		{"#X", upperx_hash}, {NULL, NULL}
 	};
 
 	if ((c[0] == ' ' || c[1] == ' ') && (c[0] == '+' || c[1] == '+'))
-		return (handle_space_plus(c[2], args, count));
+		return (handle_space_plus((c + 2), args, count));
 
 	if (c[0] == ' ' && c[1] == '%')
 	{
@@ -62,17 +65,26 @@ int _flag_checker(const char *c, va_list args, int *count)
  * Return: 1 if c is 'i' or 'd' 
  * 2 otherwise
  */
-int handle_space_plus(char c, va_list args, int *count)
+int handle_space_plus(const char *c, va_list args, int *count)
 {
-	if (c == 'd' || c == 'i')
+	char specs[] = {'o', 'x', 'X', 'u', 'c', 's'};
+	int i;
+
+	if (c[0] == 'd' || c[0] == 'i')
 	{
 		_print_sint(args, count);
 		return (2);
 	}
 
+	for (i = 0; i < 4; i++)
+	{
+		if (c[0] == specs[i])
+			return (_check_specifier(c, args, count) + 1);
+	}
+
 	_putchar('%');
 	_putchar('+');
-	_putchar(c);
+	_putchar(c[0]);
 	(*count) += 3;
 	return (2);
 }

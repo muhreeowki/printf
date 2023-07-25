@@ -19,7 +19,7 @@ typedef struct specifier
 int _printf(const char *format, ...);
 int _check_specifier(const char *c, va_list args, int *count);
 int _flag_checker(const char *c, va_list args, int *count);
-int handle_space_plus(char c, va_list args, int *count);
+int handle_space_plus(const char *c, va_list args, int *count);
 int _length_specifier(const char *c, va_list args, int *count);
 int _putchar(char c);
 void _puts(char *str);

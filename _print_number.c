@@ -33,7 +33,7 @@ void _print_int(va_list args, int *count)
  */
 void _print_sint(va_list args, int *count)
 {
-	long int n = va_arg(args, long int);
+	int n = va_arg(args, int);
 
 	if (n >= 0)
 	{
@@ -48,7 +48,7 @@ void _print_sint(va_list args, int *count)
 		n = -n;
 	}
 
-	_print_number((unsigned long int) n, count);
+	_print_number((unsigned int) n, count);
 }
 
 /**
