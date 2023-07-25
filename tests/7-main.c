@@ -4,71 +4,56 @@
 
 int main (void)
 {
+	unsigned long int n = ULONG_MAX;
 	int count;
 
-	int n = INT_MAX;
-
 	printf("__________Normal__________\n");
-	count = printf("%ld\n", n);
-	printf("count: %d\n\n", count);
 
-	count = printf("%hd\n", n);
-	printf("count: %d\n\n", count);
+	
+	count = printf("%l\n", n);
+	printf("count: %d\n", count);
 
-	count = printf("%lx\n", n);
-	printf("count: %d\n\n", count);
+	count = _printf("%l\n", n);
+	_printf("count: %d\n", count);
 
-	count = printf("%hx\n", n);
-	printf("count: %d\n\n", count);
+	/*
+	printf("%li\n", n);
+	_printf("%li\n", n);
 
-	count = printf("%lo\n", n);
-	printf("count: %d\n\n", count);
+	printf("%hi\n", n);
+	_printf("%hi\n", n);
 
-	count = printf("%ho\n", n);
-	printf("count: %d\n\n", count);
+	printf("%ld\n", n);
+	_printf("%ld\n", n);
 
-	count = printf("%lu\n", n);
-	printf("count: %d\n\n", count);
+	printf("%hd\n", n);
+	_printf("%hd\n", n);
 
-	count = printf("%hu\n", n);
-	printf("count: %d\n\n", count);
+	printf("%lx\n", n);
+	_printf("%lx\n", n);
 
-	count = printf("%lX\n", n);
-	printf("count: %d\n\n", count);
+	printf("%hx\n", n);
+	_printf("%hx\n", n);
 
-	count = printf("%hX\n", n);
-	printf("count: %d\n\n", count);
+	printf("%lo\n", n);
+	_printf("%lo\n", n);
 
-	printf("__________Our__________\n");
-	count = _printf("%ld\n", n);
-	_printf("count: %d\n\n", count);
+	printf("%ho\n", n);
+	_printf("%ho\n", n);
 
-	count = _printf("%hd\n", n);
-	_printf("count: %d\n\n", count);
+	printf("%lu\n", n);
+	_printf("%lu\n", n);
 
-	count = _printf("%lx\n", n);
-	_printf("count: %d\n\n", count);
+	printf("%hu\n", n);
+	_printf("%hu\n", n);
 
-	count = _printf("%hx\n", n);
-	_printf("count: %d\n\n", count);
+	printf("%lX\n", n);
+	_printf("%lX\n", n);
 
-	count = _printf("%lo\n", n);
-	_printf("count: %d\n\n", count);
+	printf("%hX\n", n);
+	_printf("%hX\n", n);
 
-	count = _printf("%ho\n", n);
-	_printf("count: %d\n\n", count);
-
-	count = _printf("%lu\n", n);
-	printf("count: %d\n\n", count);
-
-	count = _printf("%hu\n", n);
-	printf("count: %d\n\n", count);
-
-	count = _printf("%lX\n", n);
-	printf("count: %d\n\n", count);
-
-	count = _printf("%hX\n", n);
-	printf("count: %d\n\n", count);
+	*/
 
 
 	return (0);

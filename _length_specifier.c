@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _length_specifier - Process and handle length specifiers.
  *
@@ -9,7 +10,6 @@
  * Return: 1 (success) if the conversion specifier is processed successfully,
  *         -1 (failure) if there was an error processing the specifier.
  */
-
 int _length_specifier(const char *c, va_list args, int *count)
 {
 	int i;
@@ -37,9 +37,8 @@ int _length_specifier(const char *c, va_list args, int *count)
 	}
 
 	_putchar('%');
-	_putchar(c[0]);
 	_putchar(c[1]);
-	(*count) += 3;
+	(*count) += 2;
 
 	return (0);
 }
