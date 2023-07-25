@@ -10,10 +10,10 @@ int main (void)
 	printf("__________Normal__________\n");
 
 	
-	count = printf("%l\n", n);
+	count = printf("%+ k\n", n);
 	printf("count: %d\n", count);
 
-	count = _printf("%l\n", n);
+	count = _printf("%+ k\n", n);
 	_printf("count: %d\n", count);
 
 	/*
