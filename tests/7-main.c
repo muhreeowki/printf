@@ -9,8 +9,8 @@ int main (void)
 	/*("__________Normal__________\n");*/
 
 
-	printf("%#i\n", n);
-	_printf("%#i\n", n);
+	printf("%+ u\n", n);
+	_printf("%+ u\n", n);
 
 	/*
 	printf("%+p\n", n);

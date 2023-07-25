@@ -18,6 +18,7 @@ int _flag_checker(const char *c, va_list args, int *count)
 		{" d", _print_space}, {" i", _print_space},
 		{"+d", _print_sint}, {"+i", _print_sint},
 		{"+o", _print_oct}, {" o", _print_oct},
+		{"+u", _print_uint}, {" u", _print_uint}, {"#u", _print_uint},
 		{"+x", _print_hex_lower}, {" x", _print_hex_lower},
 		{"+X", _print_hex_upper}, {" X", _print_hex_upper},
 		{"+p", _print_plus_pointer}, {" p", _print_space_pointer},
